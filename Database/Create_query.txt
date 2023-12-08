@@ -1,4 +1,4 @@
-1) 
+--1) 
 CREATE TABLE Clients (
     ClientId VARCHAR(50) PRIMARY KEY,
     Password VARCHAR(50),
@@ -10,19 +10,19 @@ CREATE TABLE Clients (
 );
 
 
-2) 
+--2) 
 CREATE TABLE UsersDetails(
     UserId VARCHAR(50) PRIMARY KEY,
     Adhar VARCHAR(50),
     PAN VARCHAR(50),
     FatherName VARCHAR(50),
     Address VARCHAR(500),
-    Photo BLOB,
+    Photo BYTEA,
     AccountOpenDate TIMESTAMP
 );
 
 
-3)
+--3)
 CREATE TABLE Dealers(
     DealerId VARCHAR(50) PRIMARY KEY,
     Password VARCHAR(50),
@@ -35,7 +35,7 @@ CREATE TABLE Dealers(
 );
 
 
-4) 
+--4) 
 CREATE TABLE ClientHoldings(
     ClientId VARCHAR(50) PRIMARY KEY,
     ScripId VARCHAR(50),
@@ -44,16 +44,16 @@ CREATE TABLE ClientHoldings(
 );
 
 
-5) 
-CREATE TABLE Dealers(
+--5) 
+CREATE TABLE UserFund(
     UserId VARCHAR(50) PRIMARY KEY,
     AvailableCash INT,
     UtilizedCash INT
 );
 
 
-6)
-CREATE TABLE Order(
+--6)
+CREATE TABLE OrderDetails(
     OrderId VARCHAR(50) PRIMARY KEY,
     UserId VARCHAR(50),
     Type BOOLEAN,
@@ -65,7 +65,7 @@ CREATE TABLE Order(
 );
 
 
-7) 
+--7) 
 CREATE TABLE Trade(
     TradeId VARCHAR(50) PRIMARY KEY,
     OrderId VARCHAR(50),
@@ -78,7 +78,7 @@ CREATE TABLE Trade(
 );
 
 
-8) 
+--8) 
 CREATE TABLE Position(
     UserId VARCHAR(50) PRIMARY KEY,
     Type BOOLEAN,
@@ -89,5 +89,3 @@ CREATE TABLE Position(
     TradeId VARCHAR(50),
     OrderId VARCHAR(50) 
 );
-
-
