@@ -71,7 +71,7 @@ type UserFund struct {
 	UtilizedCash  int    `json:"utilizedCash"`
 }
 
-type UsersDetails struct {
+type UserDetails struct {
 	AccountOpenDate time.Time `json:"accountOpenDate"`
 	Address         string    `json:"address"`
 	Adhar           string    `json:"adhar"`
