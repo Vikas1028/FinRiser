@@ -1,9 +1,9 @@
 --1) 
 CREATE TABLE Clients (
-    ClientId VARCHAR(50) PRIMARY KEY,
-    Password VARCHAR(50),
-    Name VARCHAR(100),
-    Contact VARCHAR(50),
+    ClientId VARCHAR(10) PRIMARY KEY,
+    Password VARCHAR(20),
+    Name VARCHAR(50),
+    Contact VARCHAR(10),
     EKYC TIMESTAMP,
     LastLogin TIMESTAMP,
     Suspended BOOLEAN
@@ -12,22 +12,21 @@ CREATE TABLE Clients (
 
 --2) 
 CREATE TABLE UsersDetails(
-    UserId VARCHAR(50) PRIMARY KEY,
-    Adhar VARCHAR(50),
-    PAN VARCHAR(50),
+    UserId VARCHAR(10) PRIMARY KEY,
+    Adhar VARCHAR(12),
+    PAN VARCHAR(10),
     FatherName VARCHAR(50),
-    Address VARCHAR(500),
-    Photo BYTEA,
+    Address VARCHAR(200),
     AccountOpenDate TIMESTAMP
 );
 
 
 --3)
 CREATE TABLE Dealers(
-    DealerId VARCHAR(50) PRIMARY KEY,
-    Password VARCHAR(50),
-    Name VARCHAR(100),
-    Contact VARCHAR(50),
+    DealerId VARCHAR(10) PRIMARY KEY,
+    Password VARCHAR(20),
+    Name VARCHAR(50),
+    Contact VARCHAR(10),
     EKYC TIMESTAMP,
     LastLogin TIMESTAMP,
     Suspended BOOLEAN,
@@ -37,7 +36,7 @@ CREATE TABLE Dealers(
 
 --4) 
 CREATE TABLE ClientHoldings(
-    ClientId VARCHAR(50) PRIMARY KEY,
+    ClientId VARCHAR(10) PRIMARY KEY,
     ScripId VARCHAR(50),
     Qty INT,
     BuyAvg INT 
@@ -46,7 +45,7 @@ CREATE TABLE ClientHoldings(
 
 --5) 
 CREATE TABLE UserFund(
-    UserId VARCHAR(50) PRIMARY KEY,
+    UserId VARCHAR(10) PRIMARY KEY,
     AvailableCash INT,
     UtilizedCash INT
 );
@@ -55,7 +54,7 @@ CREATE TABLE UserFund(
 --6)
 CREATE TABLE OrderDetails(
     OrderId VARCHAR(50) PRIMARY KEY,
-    UserId VARCHAR(50),
+    UserId VARCHAR(10),
     Type BOOLEAN,
     Qty INT,
     DateTime TIMESTAMP,
@@ -80,11 +79,11 @@ CREATE TABLE Trade(
 
 --8) 
 CREATE TABLE Position(
-    UserId VARCHAR(50) PRIMARY KEY,
+    UserId VARCHAR(10) PRIMARY KEY,
     Type BOOLEAN,
     Qty INT,
     DateTime TIMESTAMP,
-    ClientId VARCHAR(50),
+    ClientId VARCHAR(10),
     ScripId VARCHAR(50),
     TradeId VARCHAR(50),
     OrderId VARCHAR(50) 

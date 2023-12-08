@@ -76,7 +76,6 @@ type UsersDetails struct {
 	Address         string    `json:"address"`
 	Adhar           string    `json:"adhar"`
 	FatherName      string    `json:"fatherName"`
-	Photo           []byte    `json:"photo,omitempty"`
 	PAN             string    `json:"pan"`
 	UserID          string    `json:"userId"`
 }
@@ -157,7 +156,6 @@ type UsersDetails struct {
 	Address         []byte    `json:"address"`
 	Adhar           []byte    `json:"adhar"`
 	FatherName      []byte    `json:"fatherName"`
-	Photo           []byte    `json:"photo,omitempty"`
 	PAN             []byte    `json:"pan"`
 	UserID          []byte    `json:"userId"`
 }
