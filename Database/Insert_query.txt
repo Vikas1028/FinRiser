@@ -1,0 +1,114 @@
+Client Insert queries:
+======================
+
+-- 1
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CAP1000', 'Puja1000@Sharma', 'Puja Sharma', '1234567890', '2022-05-01', '2023-12-08', true);
+
+-- 2
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CAR1001', 'Vikas1001@Bhandekar', 'Vikas Bhandekar', '9876543210', '2023-02-01', '2023-12-08', false);
+
+-- 3
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CAS1002', 'Dheeraj1002@Mishra', 'Dheeraj Mishra', '3456789012', '2023-03-01', '2023-12-08', false);
+
+-- 4
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CBR1003', 'Saurabh1003@Kushwaha', 'Saurabh Kushwaha', '8765432109', '2023-04-01', '2023-12-08', true);
+
+-- 5
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CCG004', 'Amit1004@Singh', 'Amit Singh', '5678901234', '2023-05-01', '2023-12-08', false);
+
+-- 6
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CGA1005', 'Jaya1005@Verma', 'Jaya Verma', '2345678901', '2023-06-01', '2023-12-08', true);
+
+-- 7
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CGJ1006', 'Raj1006@Yadav', 'Raj Yadav', '8901234567', '2023-07-01', '2023-12-08', false);
+
+-- 8
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CHR1007', 'Sonam1007@Gupta', 'Sonam Gupta', '1234509876', '2023-08-01', '2023-12-08', true);
+
+-- 9
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CMH1008', 'Rohit1008@Patel', 'Rohit Patel', '9081723456', '2023-09-01', '2023-12-08', false);
+
+-- 10
+INSERT INTO Clients (ClientId, Password, Name, Contact, EKYC, LastLogin, Suspended)
+VALUES ('CUP1009', 'Shreya1009@Kumar', 'Shreya Kumar', '6543210987', '2023-10-01', '2023-12-08', true);
+
+Dealers Insert queries:
+=======================
+
+-- 1
+INSERT INTO Dealers (DealerId, Password, Name, Contact, EKYC, LastLogin, Suspended, Ranking)
+VALUES ('DAN1000', 'Jatin1000@Kumar', 'Jatin Kumar', '1234567890', '2022-05-01', '2023-12-08', true, 3);
+
+--2
+INSERT INTO Dealers (DealerId, Password, Name, Contact, EKYC, LastLogin, Suspended, Ranking)
+VALUES ('DMH1001', 'Uma1001@Patel', 'Vishnu Patel', '9876543210', '2023-02-01', '2023-12-08', true, 1);
+
+--3
+INSERT INTO Dealers (DealerId, Password, Name, Contact, EKYC, LastLogin, Suspended, Ranking)
+VALUES ('DUP1002', 'Dev1002@Singh', 'Dev Singh', '3456789012', '2023-03-01', '2023-12-08', true, 2);
+
+
+
+UsersDetails Insert queries:
+=============================
+
+-- 1
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CAP1000', '123456789012', 'ABCDE1234F', 'Rakesh Sharma', 'Address of Puja Sharma', '2022-05-01');
+
+-- 2
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CAR1001', '987654321012', 'FGHIJ5678K', 'Ashok Bhandekar', 'Address of Vikas Bhandekar', '2023-02-01');
+
+-- 3
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CAS1002', '345678901234', 'LMNOP6789Q', 'Amit Mishra', 'Address of Dheeraj Mishra', '2023-03-01');
+
+-- 4
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CBR1003', '876543210987', 'QRSTU1234V', 'Prakash Kushwaha', 'Address of Saurabh Kushwaha', '2023-04-01');
+
+-- 5
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CAM1004', '567890123456', 'WXYZA5678B', 'Raj Singh', 'Address of Amit Singh', '2023-05-01');
+
+-- 6
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CGA1005', '234567890123', 'BCDEF1234G', 'Anuj Verma', 'Address of Jaya Verma', '2023-06-01');
+
+-- 7
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CGJ1006', '890123456789', 'HIJKL5678M', 'Sunil Yadav', 'Address of Raj Yadav', '2023-07-01');
+
+-- 8
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CHR1007', '123450987612', 'NOPQR1234S', 'Rakesh Gupta', 'Address of Sonam Gupta', '2023-08-01');
+
+-- 9
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CMH1008', '908172345612', 'TUVWX5678Y', 'Sanjay Patel', 'Address of Rohit Patel', '2023-09-01');
+
+-- 10
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('CUP1009', '654321098712', 'YZABC1234D', 'Amit Kumar', 'Address of Shreya Kumar', '2023-10-01');
+
+-- 11
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('DAN1000', '123456789012', 'ABCDE1234F', 'Rakesh Kumar', 'Address of Jatin Kumar', '2022-05-01');
+
+-- 12
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('DMH1001', '987654321012', 'FGHIJ5678K', 'Raj Patel', 'Address of Uma Patel', '2023-02-01');
+
+-- 13
+INSERT INTO UsersDetails (UserId, Adhar, PAN, FatherName, Address, AccountOpenDate)
+VALUES ('DUP1002', '345678901234', 'LMNOP6789Q', 'Amit Singh', 'Address of Dev Singh', '2023-03-01');
