@@ -4,160 +4,162 @@ import (
 	"time"
 )
 
+type ClientHoldings struct {
+	BuyAvg   int    `json:"buyAvg"`
+	ClientID string `json:"clientId"`
+	Qty      int    `json:"qty"`
+	ScripID  string `json:"scripId"`
+}
+
 type Clients struct {
 	ClientID  string    `json:"clientId"`
-	Password  string    `json:"password"`
-	Name      string    `json:"name"`
 	Contact   string    `json:"contact"`
 	EKYC      time.Time `json:"eKYC"`
 	LastLogin time.Time `json:"lastLogin"`
+	Name      string    `json:"name"`
+	Password  string    `json:"password"`
 	Suspended bool      `json:"suspended"`
-}
-
-type UsersDetails struct {
-	UserID          string    `json:"userId"`
-	Adhar           string    `json:"adhar"`
-	PAN             string    `json:"pan"`
-	FatherName      string    `json:"fatherName"`
-	Address         string    `json:"address"`
-	Photo           []byte    `json:"photo,omitempty"`
-	AccountOpenDate time.Time `json:"accountOpenDate"`
 }
 
 type Dealers struct {
-	DealerID  string    `json:"dealerId"`
-	Password  string    `json:"password"`
-	Name      string    `json:"name"`
 	Contact   string    `json:"contact"`
+	DealerID  string    `json:"dealerId"`
 	EKYC      time.Time `json:"eKYC"`
 	LastLogin time.Time `json:"lastLogin"`
-	Suspended bool      `json:"suspended"`
+	Name      string    `json:"name"`
+	Password  string    `json:"password"`
 	Ranking   int       `json:"ranking"`
-}
-
-type ClientHoldings struct {
-	ClientID string `json:"clientId"`
-	ScripID  string `json:"scripId"`
-	Qty      int    `json:"qty"`
-	BuyAvg   int    `json:"buyAvg"`
-}
-
-type UserFund struct {
-	UserID        string `json:"userId"`
-	AvailableCash int    `json:"availableCash"`
-	UtilizedCash  int    `json:"utilizedCash"`
+	Suspended bool      `json:"suspended"`
 }
 
 type OrderDetails struct {
+	ClientID string    `json:"clientId"`
+	DateTime time.Time `json:"dateTime"`
 	OrderID  string    `json:"orderId"`
+	Price    int       `json:"price"`
+	Qty      int       `json:"qty"`
+	ScripID  string    `json:"scripId"`
+	Type     bool      `json:"type"`
 	UserID   string    `json:"userId"`
-	Type     bool      `json:"type"`
-	Qty      int       `json:"qty"`
-	DateTime time.Time `json:"dateTime"`
-	ClientID string    `json:"clientId"`
-	ScripID  string    `json:"scripId"`
-	Price    int       `json:"price"`
-}
-
-type Trade struct {
-	TradeID  string    `json:"tradeId"`
-	OrderID  string    `json:"orderId"`
-	Type     bool      `json:"type"`
-	Qty      int       `json:"qty"`
-	DateTime time.Time `json:"dateTime"`
-	ClientID string    `json:"clientId"`
-	ScripID  string    `json:"scripId"`
-	Price    int       `json:"price"`
 }
 
 type Position struct {
-	UserID   string    `json:"userId"`
-	Type     bool      `json:"type"`
-	Qty      int       `json:"qty"`
-	DateTime time.Time `json:"dateTime"`
 	ClientID string    `json:"clientId"`
+	DateTime time.Time `json:"dateTime"`
+	OrderID  string    `json:"orderId"`
+	Qty      int       `json:"qty"`
 	ScripID  string    `json:"scripId"`
 	TradeID  string    `json:"tradeId"`
+	Type     bool      `json:"type"`
+	UserID   string    `json:"userId"`
+}
+
+type Trade struct {
+	ClientID string    `json:"clientId"`
+	DateTime time.Time `json:"dateTime"`
 	OrderID  string    `json:"orderId"`
+	Price    int       `json:"price"`
+	Qty      int       `json:"qty"`
+	ScripID  string    `json:"scripId"`
+	TradeID  string    `json:"tradeId"`
+	Type     bool      `json:"type"`
+}
+
+type UserFund struct {
+	AvailableCash int    `json:"availableCash"`
+	UserID        string `json:"userId"`
+	UtilizedCash  int    `json:"utilizedCash"`
+}
+
+type UsersDetails struct {
+	AccountOpenDate time.Time `json:"accountOpenDate"`
+	Address         string    `json:"address"`
+	Adhar           string    `json:"adhar"`
+	FatherName      string    `json:"fatherName"`
+	Photo           []byte    `json:"photo,omitempty"`
+	PAN             string    `json:"pan"`
+	UserID          string    `json:"userId"`
 }
 
 /*
-// using []byte in place of string
+// using []byte in place of []byte
+
+
+type ClientHoldings struct {
+	BuyAvg   int    `json:"buyAvg"`
+	ClientID []byte `json:"clientId"`
+	Qty      int    `json:"qty"`
+	ScripID  []byte `json:"scripId"`
+}
 
 type Clients struct {
 	ClientID  []byte    `json:"clientId"`
-	Password  []byte    `json:"password"`
-	Name      []byte    `json:"name"`
 	Contact   []byte    `json:"contact"`
 	EKYC      time.Time `json:"eKYC"`
 	LastLogin time.Time `json:"lastLogin"`
+	Name      []byte    `json:"name"`
+	Password  []byte    `json:"password"`
 	Suspended bool      `json:"suspended"`
-}
-
-type UsersDetails struct {
-	UserID          []byte    `json:"userId"`
-	Adhar           []byte    `json:"adhar"`
-	PAN             []byte    `json:"pan"`
-	FatherName      []byte    `json:"fatherName"`
-	Address         []byte    `json:"address"`
-	Photo           []byte    `json:"photo,omitempty"`
-	AccountOpenDate time.Time `json:"accountOpenDate"`
 }
 
 type Dealers struct {
-	DealerID  []byte    `json:"dealerId"`
-	Password  []byte    `json:"password"`
-	Name      []byte    `json:"name"`
 	Contact   []byte    `json:"contact"`
+	DealerID  []byte    `json:"dealerId"`
 	EKYC      time.Time `json:"eKYC"`
 	LastLogin time.Time `json:"lastLogin"`
-	Suspended bool      `json:"suspended"`
+	Name      []byte    `json:"name"`
+	Password  []byte    `json:"password"`
 	Ranking   int       `json:"ranking"`
-}
-
-type ClientHoldings struct {
-	ClientID []byte `json:"clientId"`
-	ScripID  []byte `json:"scripId"`
-	Qty      int    `json:"qty"`
-	BuyAvg   int    `json:"buyAvg"`
-}
-
-type UserFund struct {
-	UserID        []byte `json:"userId"`
-	AvailableCash int    `json:"availableCash"`
-	UtilizedCash  int    `json:"utilizedCash"`
+	Suspended bool      `json:"suspended"`
 }
 
 type OrderDetails struct {
+	ClientID []byte    `json:"clientId"`
+	DateTime time.Time `json:"dateTime"`
 	OrderID  []byte    `json:"orderId"`
+	Price    int       `json:"price"`
+	Qty      int       `json:"qty"`
+	ScripID  []byte    `json:"scripId"`
+	Type     bool      `json:"type"`
 	UserID   []byte    `json:"userId"`
-	Type     bool      `json:"type"`
-	Qty      int       `json:"qty"`
-	DateTime time.Time `json:"dateTime"`
-	ClientID []byte    `json:"clientId"`
-	ScripID  []byte    `json:"scripId"`
-	Price    int       `json:"price"`
-}
-
-type Trade struct {
-	TradeID  []byte    `json:"tradeId"`
-	OrderID  []byte    `json:"orderId"`
-	Type     bool      `json:"type"`
-	Qty      int       `json:"qty"`
-	DateTime time.Time `json:"dateTime"`
-	ClientID []byte    `json:"clientId"`
-	ScripID  []byte    `json:"scripId"`
-	Price    int       `json:"price"`
 }
 
 type Position struct {
-	UserID   []byte    `json:"userId"`
-	Type     bool      `json:"type"`
-	Qty      int       `json:"qty"`
-	DateTime time.Time `json:"dateTime"`
 	ClientID []byte    `json:"clientId"`
+	DateTime time.Time `json:"dateTime"`
+	OrderID  []byte    `json:"orderId"`
+	Qty      int       `json:"qty"`
 	ScripID  []byte    `json:"scripId"`
 	TradeID  []byte    `json:"tradeId"`
-	OrderID  []byte    `json:"orderId"`
+	Type     bool      `json:"type"`
+	UserID   []byte    `json:"userId"`
 }
+
+type Trade struct {
+	ClientID []byte    `json:"clientId"`
+	DateTime time.Time `json:"dateTime"`
+	OrderID  []byte    `json:"orderId"`
+	Price    int       `json:"price"`
+	Qty      int       `json:"qty"`
+	ScripID  []byte    `json:"scripId"`
+	TradeID  []byte    `json:"tradeId"`
+	Type     bool      `json:"type"`
+}
+
+type UserFund struct {
+	AvailableCash int    `json:"availableCash"`
+	UserID        []byte `json:"userId"`
+	UtilizedCash  int    `json:"utilizedCash"`
+}
+
+type UsersDetails struct {
+	AccountOpenDate time.Time `json:"accountOpenDate"`
+	Address         []byte    `json:"address"`
+	Adhar           []byte    `json:"adhar"`
+	FatherName      []byte    `json:"fatherName"`
+	Photo           []byte    `json:"photo,omitempty"`
+	PAN             []byte    `json:"pan"`
+	UserID          []byte    `json:"userId"`
+}
+
 */
